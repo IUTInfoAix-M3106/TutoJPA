@@ -1,5 +1,6 @@
 package fr.univ_amu.iut.tutoJPA;
-import javax.persistence.*;
+
+import javax.persistence.Embeddable;
 
 @Embeddable
 public class Adresse {
@@ -7,8 +8,9 @@ public class Adresse {
     private String rue;
     private String codePostal;
     private String ville;
-        
-    public Adresse() {}
+
+    public Adresse() {
+    }
 
     public Adresse(int numero, String rue, String codePostal, String ville) {
         this.numero = numero;
