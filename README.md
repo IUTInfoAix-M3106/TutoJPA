@@ -152,7 +152,7 @@ public class Employe {
     public long getSalaire() { return salaire; }
     public void setSalaire(long salaire) { this.salaire =salaire; }
     public Adresse getAdresse() { return adresse; }
-    public void setAdresse(Adresse adresse) { adresse = adresse; }
+    public void setAdresse(Adresse adresse) { this.adresse = adresse; }
     public Departement getDepartement() { return departement; }
     public void setDepartement(Departement departement) { 
         this.departement = departement; 
@@ -249,12 +249,11 @@ Pour que Maven place ce fichier au bon endroit à la construction du `jar`, il l
     <class>fr.univ_amu.iut.tutoJPA.Departement</class>
     <class>fr.univ_amu.iut.tutoJPA.Adresse</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" 
-                value="jdbc:mysql://localhost:3306/employeBD"/>
-      <property name="javax.persistence.jdbc.driver" 
-                value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/employeBD"/>
       <property name="javax.persistence.jdbc.user"  value="monUser"/>
       <property name="javax.persistence.jdbc.password"  value="monPassword"/>
+      <property name="eclipselink.logging.level" value="FINE" />
       <property name="eclipselink.ddl-generation"  value="create-tables"/>
     </properties>
   </persistence-unit>
